@@ -3,356 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Registry — Student Assignment Dashboard</title>
+    <title>Project Registry — Pro Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ink:          #1B2A46;
-            --ink-soft:     #435374;
-            --parchment:    #F4EFE3;
-            --parchment-2:  #ECE4D0;
-            --card-paper:   #FFFDF7;
-            --brass:        #A9793F;
-            --brass-soft:   #C9A46B;
-            --rule:         #CDC0A0;
-            --stamp-red:    #9A3324;
-            --stamp-red-bg: #F6E4DF;
-            --stamp-green:  #2E6B4E;
-            --stamp-green-bg:#E3EEE3;
-            --shadow: 0 1px 2px rgba(27,42,70,0.06), 0 8px 20px rgba(27,42,70,0.06);
+            --bg-grad-1: #0f172a;
+            --bg-grad-2: #1e1b4b;
+            --bg-grad-3: #312e81;
+            
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-highlight: rgba(255, 255, 255, 0.15);
+            
+            --neon-red: #f43f5e;
+            --neon-red-glow: rgba(244, 63, 94, 0.3);
+            
+            --neon-green: #10b981;
+            --neon-green-glow: rgba(16, 185, 129, 0.3);
+            
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
         }
 
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'IBM Plex Sans', sans-serif;
-            background: var(--parchment);
-            background-image:
-                radial-gradient(circle at 100% 0%, rgba(169,121,63,0.08), transparent 45%),
-                radial-gradient(circle at 0% 100%, rgba(27,42,70,0.05), transparent 40%);
-            color: var(--ink);
-            margin: 0;
-            padding: 0 20px 60px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, var(--bg-grad-1), var(--bg-grad-2), var(--bg-grad-3));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-main);
             min-height: 100vh;
+            padding: 0 20px 60px;
         }
 
-        /* ---------- Letterhead ---------- */
-        .letterhead {
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ---------- Glassmorphism Base ---------- */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* ---------- Header ---------- */
+        .header {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 44px 10px 26px;
+            margin: 40px auto 30px;
+            padding: 30px 40px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 22px;
-            border-bottom: 2px solid var(--ink);
+            text-align: center;
+            position: relative;
         }
-        .seal {
-            flex-shrink: 0;
-            width: 62px;
-            height: 62px;
-        }
-        .letterhead-text { flex: 1; }
+
         .eyebrow {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            letter-spacing: 0.18em;
+            font-size: 12px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--brass);
+            color: #38bdf8;
             font-weight: 600;
-            margin: 0 0 6px;
+            margin-bottom: 8px;
         }
+
         h1 {
-            font-family: 'Fraunces', serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-size: 34px;
-            letter-spacing: -0.01em;
-            margin: 0 0 6px;
-            color: var(--ink);
+            font-weight: 700;
+            font-size: 38px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
         }
+
         .sync-line {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12.5px;
-            color: var(--ink-soft);
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 400;
         }
+
         .dot {
-            width: 7px; height: 7px; border-radius: 50%;
-            background: var(--stamp-green);
-            box-shadow: 0 0 0 3px var(--stamp-green-bg);
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #38bdf8;
+            box-shadow: 0 0 10px #38bdf8;
+            animation: pulse 2s infinite;
         }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+        }
+
         #loading-text {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12.5px;
-            color: var(--brass) !important;
-            margin-top: 4px;
+            font-size: 13px;
+            color: #fcd34d !important;
+            margin-top: 15px;
+            font-weight: 500;
+            background: rgba(252, 211, 77, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
         }
 
         #admin-badge {
-            font-family: 'Fraunces', serif;
+            position: absolute;
+            top: 30px;
+            right: 40px;
             font-weight: 600;
             font-size: 12px;
-            letter-spacing: 0.06em;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            color: var(--stamp-red) !important;
-            background: var(--stamp-red-bg) !important;
-            border: 1.5px solid var(--stamp-red);
-            border-radius: 3px !important;
-            padding: 5px 12px !important;
-            transform: rotate(-3deg);
+            color: #fff !important;
+            background: linear-gradient(45deg, #f59e0b, #ef4444) !important;
+            border: none;
+            border-radius: 20px !important;
+            padding: 6px 16px !important;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
         }
 
         /* ---------- Layout ---------- */
         .container {
             display: flex;
             flex-wrap: wrap;
-            gap: 26px;
+            gap: 30px;
             max-width: 1200px;
-            margin: 34px auto 0;
+            margin: 0 auto;
         }
+
         .column {
             flex: 1;
             min-width: 340px;
-            background: var(--card-paper);
-            border: 1px solid var(--rule);
-            border-radius: 4px;
-            padding: 8px 22px 26px;
-            box-shadow: var(--shadow);
+            padding: 30px 25px;
             position: relative;
+            overflow: hidden;
         }
+
+        /* Glowing accents for columns */
         .column::before {
             content: "";
             position: absolute;
-            top: 0; left: 24px;
-            width: 64px; height: 8px;
-            border-radius: 0 0 4px 4px;
+            top: 0; left: 0; right: 0;
+            height: 4px;
         }
-        .column.pending::before { background: var(--stamp-red); }
-        .column.assigned::before { background: var(--stamp-green); }
+        .column.pending::before {
+            background: linear-gradient(90deg, transparent, var(--neon-red), transparent);
+            box-shadow: 0 0 15px var(--neon-red-glow);
+        }
+        .column.assigned::before {
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            box-shadow: 0 0 15px var(--neon-green-glow);
+        }
 
         .col-title {
-            font-family: 'Fraunces', serif;
             font-weight: 600;
-            font-size: 20px;
-            padding: 22px 0 14px;
-            margin: 0;
-            border-bottom: 1px solid var(--rule);
+            font-size: 22px;
+            margin-bottom: 5px;
+            text-align: center;
         }
-        .red-title { color: var(--stamp-red); }
-        .green-title { color: var(--stamp-green); }
+        .red-title { color: var(--neon-red); text-shadow: 0 0 10px var(--neon-red-glow); }
+        .green-title { color: var(--neon-green); text-shadow: 0 0 10px var(--neon-green-glow); }
 
         .stats {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-            margin: 14px 0 18px;
-            font-weight: 600;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 25px;
+            background: rgba(0,0,0,0.2);
+            padding: 4px 12px;
+            border-radius: 12px;
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        /* ---------- Student card ---------- */
+        /* ---------- Student Card ---------- */
         .student-card {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--rule);
-            border-radius: 4px;
-            padding: 16px 18px;
-            margin-bottom: 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 14px;
-            background: var(--card-paper);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            gap: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
+
         .student-card:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow);
+            transform: translateY(-3px) scale(1.01);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--glass-highlight);
         }
-        .card-red { background: linear-gradient(180deg, var(--stamp-red-bg), var(--card-paper) 70%); }
-        .card-green { background: linear-gradient(180deg, var(--stamp-green-bg), var(--card-paper) 70%); }
 
+        .card-red { border-left: 4px solid var(--neon-red); }
+        .card-red:hover { box-shadow: 0 10px 20px var(--neon-red-glow); }
+        
+        .card-green { border-left: 4px solid var(--neon-green); }
+        .card-green:hover { box-shadow: 0 10px 20px var(--neon-green-glow); }
+
+        .student-info { flex: 1; }
+        
         .student-info h4 {
-            margin: 0 0 4px 0;
-            font-family: 'Fraunces', serif;
             font-weight: 600;
-            font-size: 16.5px;
-            color: var(--ink);
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
         .student-info p {
-            margin: 2px 0;
-            font-size: 12.5px;
-            color: var(--ink-soft);
-            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        /* signature element: registrar ink stamp */
-        .stamp {
-            position: absolute;
-            top: 10px;
-            right: 14px;
-            font-family: 'Fraunces', serif;
-            font-weight: 700;
-            font-size: 10.5px;
-            letter-spacing: 0.12em;
+        .roll-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        .modern-badge {
+            font-size: 10px;
+            font-weight: 600;
             text-transform: uppercase;
-            padding: 3px 9px;
-            border-radius: 3px;
-            border: 1.5px solid;
-            transform: rotate(6deg);
-            pointer-events: none;
-            opacity: 0.9;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
         }
-        .card-red .stamp { color: var(--stamp-red); border-color: var(--stamp-red); }
-        .card-green .stamp { color: var(--stamp-green); border-color: var(--stamp-green); }
+        .badge-red { color: var(--neon-red); background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.2); }
+        .badge-green { color: var(--neon-green); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); }
 
+        /* ---------- Buttons ---------- */
         button {
-            font-family: 'IBM Plex Sans', sans-serif;
-            padding: 9px 18px;
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             font-size: 13px;
-            letter-spacing: 0.01em;
-            white-space: nowrap;
-            transition: filter 0.15s ease, transform 0.1s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        button:hover { filter: brightness(1.08); }
-        button:active { transform: scale(0.97); }
-        button:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
-        .btn-assign { background-color: var(--stamp-green); color: #fff; }
-        .btn-remove { background-color: var(--stamp-red); color: #fff; }
+        
+        .btn-assign { 
+            background: linear-gradient(135deg, #10b981, #059669); 
+            color: #fff; 
+        }
+        .btn-assign:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--neon-green-glow); }
+        
+        .btn-remove { 
+            background: linear-gradient(135deg, #f43f5e, #e11d48); 
+            color: #fff; 
+        }
+        .btn-remove:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--neon-red-glow); }
 
         /* ---------- Footer ---------- */
         .footer {
             max-width: 1200px;
-            margin: 48px auto 0;
-            padding-top: 18px;
-            border-top: 1px solid var(--rule);
+            margin: 50px auto 0;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
+
         .footer-note {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11.5px;
-            color: var(--ink-soft);
-            letter-spacing: 0.02em;
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+
         .admin-link {
-            font-family: 'Fraunces', serif;
-            font-weight: 600;
-            font-size: 12.5px;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--brass);
+            font-weight: 500;
+            font-size: 13px;
+            color: #fff;
             text-decoration: none;
-            border: 1.5px dashed var(--brass-soft);
-            border-radius: 3px;
-            padding: 6px 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 8px 20px;
             cursor: pointer;
-            transition: background 0.15s ease, color 0.15s ease;
+            transition: all 0.2s ease;
         }
-        .admin-link:hover { background: var(--brass); color: #fff; border-color: var(--brass); }
-
-        @media (max-width: 720px) {
-            .letterhead { padding-top: 30px; }
-            h1 { font-size: 26px; }
-            .footer { flex-direction: column; align-items: flex-start; }
+        
+        .admin-link:hover { 
+            background: rgba(255,255,255,0.1); 
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 0 15px rgba(255,255,255,0.05);
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            .student-card, button { transition: none; }
+        @media (max-width: 768px) {
+            .header { padding: 30px 20px; }
+            #admin-badge { top: 15px; right: 15px; font-size: 10px; padding: 4px 10px !important; }
+            h1 { font-size: 28px; }
+            .student-card { flex-direction: column; align-items: flex-start; }
+            button { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="letterhead">
-        <svg class="seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="32" cy="32" r="30" fill="none" stroke="#1B2A46" stroke-width="2"/>
-            <circle cx="32" cy="32" r="24" fill="none" stroke="#A9793F" stroke-width="1"/>
-            <text x="32" y="37" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="19" fill="#1B2A46">PR</text>
-        </svg>
-        <div class="letterhead-text">
-            <p class="eyebrow">Office of Project Assignment</p>
-            <h1>Student Project Registry</h1>
-            <div class="sync-line">
-                <span class="dot"></span>
-                <span>Live registry &middot; synced from GitHub repository</span>
-            </div>
-            <div id="loading-text">Loading data from GitHub...</div>
+    <div class="header glass-panel">
+        <p class="eyebrow">Office of Project Assignment</p>
+        <h1>Student Project Registry</h1>
+        <div class="sync-line">
+            <span class="dot"></span>
+            <span>Live registry • Synced dynamically via GitHub</span>
         </div>
-        <span id="admin-badge" style="display: none;">Staff Mode Active</span>
+        <div id="loading-text">Loading secure data environment...</div>
+        <span id="admin-badge" style="display: none;">Admin Access Verified</span>
     </div>
 
     <div class="container">
-        <div class="column pending">
-            <h2 class="col-title red-title">Pending Assignment</h2>
-            <div class="stats" id="red-count">Count: 0</div>
+        <div class="column pending glass-panel">
+            <h2 class="col-title red-title">Action Required</h2>
+            <div class="stats" id="red-count">Pending: 0</div>
             <div id="red-list"></div>
         </div>
-        <div class="column assigned">
-            <h2 class="col-title green-title">Project Assigned</h2>
-            <div class="stats" id="green-count">Count: 0</div>
+        <div class="column assigned glass-panel">
+            <h2 class="col-title green-title">Project Confirmed</h2>
+            <div class="stats" id="green-count">Assigned: 0</div>
             <div id="green-list"></div>
         </div>
     </div>
 
-    <div class="footer">
-        <span class="footer-note">Records update instantly &middot; backed by GitHub version history</span>
-        <a class="admin-link" id="admin-btn">Staff Access →</a>
+    <div class="footer glass-panel">
+        <span class="footer-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Encrypted GitHub REST API Connection
+        </span>
+        <a class="admin-link" id="admin-btn">Developer Access ⚡</a>
     </div>
 
     <script>
         // 🚨 CONFIGURATION 🚨
-// 🚨 CONFIGURATION 🚨
-const GITHUB_USERNAME = "Maazitm"; 
-const REPO_NAME = "academic-project-dashboard";             
-const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // The file we created in Step 1
+        const GITHUB_USERNAME = "Maazitm"; 
+        const REPO_NAME = "academic-project-dashboard";             
+        const FILE_PATH = "data.json"; 
         
         const API_URL = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${FILE_PATH}`;
 
         let studentData = [];
-        let fileSha = ""; // GitHub requires this code to update the file
+        let fileSha = ""; 
         let adminToken = ""; 
         let isAdmin = false;
 
-        // 1. FETCH DATA DIRECTLY FROM GITHUB API (Bypasses browser cache!)
+        // 1. FETCH DATA DIRECTLY FROM GITHUB API
         async function fetchGitHubData() {
             try {
                 const response = await fetch(API_URL);
                 if (!response.ok) throw new Error("Could not fetch data.json");
                 
                 const data = await response.json();
-                fileSha = data.sha; // Save the SHA for updating later
+                fileSha = data.sha; 
                 
-                // GitHub sends the JSON encoded in base64. We must decode it.
                 const decodedContent = decodeURIComponent(escape(window.atob(data.content)));
                 studentData = JSON.parse(decodedContent);
                 
                 document.getElementById('loading-text').style.display = "none";
                 renderUI();
             } catch (error) {
-                document.getElementById('loading-text').innerText = "Error loading data. Make sure data.json exists.";
+                document.getElementById('loading-text').innerText = "Error fetching data. Check repository visibility or formatting.";
                 console.error(error);
             }
         }
 
         // 2. ADMIN LOGIN
         document.getElementById('admin-btn').addEventListener('click', () => {
-            if (isAdmin) { alert("You are already Admin."); return; }
+            if (isAdmin) { alert("You are already authenticated as Admin."); return; }
             
-            // Ask for the GitHub Token instead of a hardcoded password
-            const token = prompt("Enter your GitHub Personal Access Token:");
+            const token = prompt("Enter GitHub Personal Access Token (Classic):");
             if (token) {
                 adminToken = token;
                 isAdmin = true;
@@ -361,23 +412,19 @@ const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // 
             }
         });
 
-        // 3. UPDATE THE GITHUB FILE (The Magic Part)
+        // 3. UPDATE THE GITHUB FILE
         window.toggleProjectStatus = async function(studentId) {
             if (!isAdmin || !adminToken) return;
 
             document.getElementById('loading-text').style.display = "block";
-            document.getElementById('loading-text').innerText = "Updating GitHub Repository...";
+            document.getElementById('loading-text').innerText = "Pushing update to GitHub...";
 
-            // Find student and flip their status
             const student = studentData.find(s => s.id === studentId);
             if (student) student.hasProject = !student.hasProject;
 
-            // Prepare the new JSON file content
             const updatedJson = JSON.stringify(studentData, null, 2);
-            // Encode back to base64 for GitHub
             const encodedContent = window.btoa(unescape(encodeURIComponent(updatedJson)));
 
-            // Send the PUT request to GitHub
             try {
                 const response = await fetch(API_URL, {
                     method: "PUT",
@@ -386,28 +433,28 @@ const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // 
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        message: `Admin updated status for student ID ${studentId}`,
+                        message: `UI Dashboard: Updated project status for student ID ${studentId}`,
                         content: encodedContent,
-                        sha: fileSha // We must provide the original SHA to overwrite it
+                        sha: fileSha 
                     })
                 });
 
                 if (response.ok) {
                     const result = await response.json();
-                    fileSha = result.content.sha; // Update the SHA for the next click
+                    fileSha = result.content.sha; 
                     document.getElementById('loading-text').style.display = "none";
-                    renderUI(); // Redraw screen
+                    renderUI(); 
                 } else {
-                    alert("Update failed! Is your GitHub Token correct?");
+                    alert("Update failed! Please verify your GitHub Token permissions (needs 'repo' access).");
                     document.getElementById('loading-text').style.display = "none";
                 }
             } catch (error) {
                 console.error(error);
-                alert("Network error occurred.");
+                alert("Network error occurred during deployment.");
             }
         };
 
-        // 4. DRAW THE SCREEN
+        // 4. DRAW THE MODERN UI
         function renderUI() {
             const redListDiv = document.getElementById('red-list');
             const greenListDiv = document.getElementById('green-list');
@@ -419,21 +466,35 @@ const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // 
 
             studentData.forEach(student => {
                 const card = document.createElement('div');
+                
                 const buttonHtml = isAdmin 
                     ? (student.hasProject 
-                        ? `<button class="btn-remove" onclick="window.toggleProjectStatus(${student.id})">Remove Project</button>`
-                        : `<button class="btn-assign" onclick="window.toggleProjectStatus(${student.id})">Assign Project</button>`)
+                        ? `<button class="btn-remove" onclick="window.toggleProjectStatus(${student.id})">Revoke Project</button>`
+                        : `<button class="btn-assign" onclick="window.toggleProjectStatus(${student.id})">Confirm Project</button>`)
                     : ``; 
 
                 card.className = student.hasProject ? 'student-card card-green' : 'student-card card-red';
+                
+                // Updated Card Inner HTML for the Glassmorphism Look
                 card.innerHTML = `
-                    <span class="stamp">${student.hasProject ? 'On File' : 'Pending'}</span>
                     <div class="student-info">
-                        <h4>${student.id}. ${student.name}</h4>
-                        <p>${student.email} | ${student.phone}</p>
-                        <p>Roll: ${student.roll}</p>
+                        <h4>
+                            ${student.id}. ${student.name}
+                            <span class="modern-badge ${student.hasProject ? 'badge-green' : 'badge-red'}">
+                                ${student.hasProject ? 'Assigned' : 'Pending'}
+                            </span>
+                        </h4>
+                        <p>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            ${student.email}
+                        </p>
+                        <p>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            ${student.phone}
+                            <span class="roll-badge">ID: ${student.roll}</span>
+                        </p>
                     </div>
-                    ${buttonHtml}
+                    <div>${buttonHtml}</div>
                 `;
 
                 if (student.hasProject) {
@@ -445,11 +506,10 @@ const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // 
                 }
             });
 
-            document.getElementById('red-count').innerText = `Total Students: ${redCount}`;
-            document.getElementById('green-count').innerText = `Total Students: ${greenCount}`;
+            document.getElementById('red-count').innerText = `Pending Assignments: ${redCount}`;
+            document.getElementById('green-count').innerText = `Active Projects: ${greenCount}`;
         }
 
-        // Run when page loads
         window.onload = fetchGitHubData;
     </script>
 </body>
