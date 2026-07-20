@@ -3,48 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Project Management</title>
+    <title>Project Registry — Student Assignment Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f4f7f6; --text-color: #333;
-            --red-bg: #ffebee; --red-border: #ef9a9a; --red-text: #c62828;
-            --green-bg: #e8f5e9; --green-border: #a5d6a7; --green-text: #2e7d32;
+            --ink:          #1B2A46;
+            --ink-soft:     #435374;
+            --parchment:    #F4EFE3;
+            --parchment-2:  #ECE4D0;
+            --card-paper:   #FFFDF7;
+            --brass:        #A9793F;
+            --brass-soft:   #C9A46B;
+            --rule:         #CDC0A0;
+            --stamp-red:    #9A3324;
+            --stamp-red-bg: #F6E4DF;
+            --stamp-green:  #2E6B4E;
+            --stamp-green-bg:#E3EEE3;
+            --shadow: 0 1px 2px rgba(27,42,70,0.06), 0 8px 20px rgba(27,42,70,0.06);
         }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .container { display: flex; flex-wrap: wrap; gap: 20px; max-width: 1400px; margin: 0 auto; }
-        .column { flex: 1; min-width: 350px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .col-title { text-align: center; padding-bottom: 15px; border-bottom: 2px solid #eee; margin-top: 0; }
-        .red-title { color: var(--red-text); } .green-title { color: var(--green-text); }
-        .student-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .card-red { background-color: var(--red-bg); border-color: var(--red-border); }
-        .card-green { background-color: var(--green-bg); border-color: var(--green-border); }
-        .student-info h4 { margin: 0 0 5px 0; font-size: 16px; }
-        .student-info p { margin: 2px 0; font-size: 13px; color: #555; }
-        button { padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-        .btn-assign { background-color: var(--green-text); color: white; }
-        .btn-remove { background-color: var(--red-text); color: white; }
-        .stats { text-align: center; font-weight: bold; margin-bottom: 15px; }
-        .footer { text-align: right; margin-top: 40px; padding-right: 20px; }
-        .admin-link { color: #aaa; text-decoration: none; font-size: 12px; cursor: pointer; }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: var(--parchment);
+            background-image:
+                radial-gradient(circle at 100% 0%, rgba(169,121,63,0.08), transparent 45%),
+                radial-gradient(circle at 0% 100%, rgba(27,42,70,0.05), transparent 40%);
+            color: var(--ink);
+            margin: 0;
+            padding: 0 20px 60px;
+            min-height: 100vh;
+        }
+
+        /* ---------- Letterhead ---------- */
+        .letterhead {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 44px 10px 26px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            border-bottom: 2px solid var(--ink);
+        }
+        .seal {
+            flex-shrink: 0;
+            width: 62px;
+            height: 62px;
+        }
+        .letterhead-text { flex: 1; }
+        .eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--brass);
+            font-weight: 600;
+            margin: 0 0 6px;
+        }
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-size: 34px;
+            letter-spacing: -0.01em;
+            margin: 0 0 6px;
+            color: var(--ink);
+        }
+        .sync-line {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            color: var(--ink-soft);
+        }
+        .dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--stamp-green);
+            box-shadow: 0 0 0 3px var(--stamp-green-bg);
+        }
+        #loading-text {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            color: var(--brass) !important;
+            margin-top: 4px;
+        }
+
+        #admin-badge {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--stamp-red) !important;
+            background: var(--stamp-red-bg) !important;
+            border: 1.5px solid var(--stamp-red);
+            border-radius: 3px !important;
+            padding: 5px 12px !important;
+            transform: rotate(-3deg);
+        }
+
+        /* ---------- Layout ---------- */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 26px;
+            max-width: 1200px;
+            margin: 34px auto 0;
+        }
+        .column {
+            flex: 1;
+            min-width: 340px;
+            background: var(--card-paper);
+            border: 1px solid var(--rule);
+            border-radius: 4px;
+            padding: 8px 22px 26px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .column::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 24px;
+            width: 64px; height: 8px;
+            border-radius: 0 0 4px 4px;
+        }
+        .column.pending::before { background: var(--stamp-red); }
+        .column.assigned::before { background: var(--stamp-green); }
+
+        .col-title {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 20px;
+            padding: 22px 0 14px;
+            margin: 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .red-title { color: var(--stamp-red); }
+        .green-title { color: var(--stamp-green); }
+
+        .stats {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin: 14px 0 18px;
+            font-weight: 600;
+        }
+
+        /* ---------- Student card ---------- */
+        .student-card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--rule);
+            border-radius: 4px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            background: var(--card-paper);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .student-card:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow);
+        }
+        .card-red { background: linear-gradient(180deg, var(--stamp-red-bg), var(--card-paper) 70%); }
+        .card-green { background: linear-gradient(180deg, var(--stamp-green-bg), var(--card-paper) 70%); }
+
+        .student-info h4 {
+            margin: 0 0 4px 0;
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 16.5px;
+            color: var(--ink);
+        }
+        .student-info p {
+            margin: 2px 0;
+            font-size: 12.5px;
+            color: var(--ink-soft);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* signature element: registrar ink stamp */
+        .stamp {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 10.5px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 3px;
+            border: 1.5px solid;
+            transform: rotate(6deg);
+            pointer-events: none;
+            opacity: 0.9;
+        }
+        .card-red .stamp { color: var(--stamp-red); border-color: var(--stamp-red); }
+        .card-green .stamp { color: var(--stamp-green); border-color: var(--stamp-green); }
+
+        button {
+            font-family: 'IBM Plex Sans', sans-serif;
+            padding: 9px 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            transition: filter 0.15s ease, transform 0.1s ease;
+        }
+        button:hover { filter: brightness(1.08); }
+        button:active { transform: scale(0.97); }
+        button:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+        .btn-assign { background-color: var(--stamp-green); color: #fff; }
+        .btn-remove { background-color: var(--stamp-red); color: #fff; }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            max-width: 1200px;
+            margin: 48px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid var(--rule);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .footer-note {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11.5px;
+            color: var(--ink-soft);
+            letter-spacing: 0.02em;
+        }
+        .admin-link {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 12.5px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--brass);
+            text-decoration: none;
+            border: 1.5px dashed var(--brass-soft);
+            border-radius: 3px;
+            padding: 6px 14px;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+        .admin-link:hover { background: var(--brass); color: #fff; border-color: var(--brass); }
+
+        @media (max-width: 720px) {
+            .letterhead { padding-top: 30px; }
+            h1 { font-size: 26px; }
+            .footer { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .student-card, button { transition: none; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Student Project Assignment Dashboard</h1>
-        <p>Data synced directly from GitHub Repository</p>
-        <span id="admin-badge" style="display: none; background: #333; color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px;">Admin Mode Active</span>
-        <div id="loading-text" style="color: blue; margin-top: 10px;">Loading data from GitHub...</div>
+    <div class="letterhead">
+        <svg class="seal" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="none" stroke="#1B2A46" stroke-width="2"/>
+            <circle cx="32" cy="32" r="24" fill="none" stroke="#A9793F" stroke-width="1"/>
+            <text x="32" y="37" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="19" fill="#1B2A46">PR</text>
+        </svg>
+        <div class="letterhead-text">
+            <p class="eyebrow">Office of Project Assignment</p>
+            <h1>Student Project Registry</h1>
+            <div class="sync-line">
+                <span class="dot"></span>
+                <span>Live registry &middot; synced from GitHub repository</span>
+            </div>
+            <div id="loading-text">Loading data from GitHub...</div>
+        </div>
+        <span id="admin-badge" style="display: none;">Staff Mode Active</span>
     </div>
 
     <div class="container">
-        <div class="column">
-            <h2 class="col-title red-title">Pending Project Selection</h2>
+        <div class="column pending">
+            <h2 class="col-title red-title">Pending Assignment</h2>
             <div class="stats" id="red-count">Count: 0</div>
             <div id="red-list"></div>
         </div>
-        <div class="column">
+        <div class="column assigned">
             <h2 class="col-title green-title">Project Assigned</h2>
             <div class="stats" id="green-count">Count: 0</div>
             <div id="green-list"></div>
@@ -52,7 +308,8 @@
     </div>
 
     <div class="footer">
-        <a class="admin-link" id="admin-btn">Admin Access</a>
+        <span class="footer-note">Records update instantly &middot; backed by GitHub version history</span>
+        <a class="admin-link" id="admin-btn">Staff Access →</a>
     </div>
 
     <script>
@@ -170,6 +427,7 @@ const FILE_PATH = "data.json";  // <- ONLY write "data.json" here!           // 
 
                 card.className = student.hasProject ? 'student-card card-green' : 'student-card card-red';
                 card.innerHTML = `
+                    <span class="stamp">${student.hasProject ? 'On File' : 'Pending'}</span>
                     <div class="student-info">
                         <h4>${student.id}. ${student.name}</h4>
                         <p>${student.email} | ${student.phone}</p>
