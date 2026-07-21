@@ -846,7 +846,7 @@
     "phone": "9112467074",
     "roll": "1506",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 55,
     "batch": "Flutter"
   }
 ]
