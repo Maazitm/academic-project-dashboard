@@ -335,14 +335,47 @@
     }
   }
 
-  document.getElementById('admin-btn').addEventListener('click', () => {
+  document.getElementById('admin-btn').addEventListener('click', async () => {
     if(isAdmin){ alert("Staff mode is already on."); return; }
-    const token = prompt("Enter your GitHub Personal Access Token:");
-    if(token){
-      adminToken = token;
-      isAdmin = true;
-      document.getElementById('admin-badge').style.display = "inline-block";
-      render();
+    const token = (prompt("Enter your GitHub Personal Access Token:") || "").trim();
+    if(!token) return;
+
+    const loadingEl = document.getElementById('loading-text');
+    loadingEl.style.display = "block";
+    loadingEl.innerText = "Verifying access...";
+
+    try{
+      // Check the token against this specific repo, not just that it's "a" valid token.
+      const repoUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}`;
+      const response = await fetch(repoUrl, {
+        headers: { "Authorization": `token ${token}` }
+      });
+
+      if(response.status === 401){
+        alert("That access token isn't valid. Please check it and try again.");
+      } else if(response.status === 403){
+        alert("That token was rejected (rate-limited or insufficient scope). Please try again.");
+      } else if(response.status === 404){
+        alert("That token doesn't have access to this repository.");
+      } else if(!response.ok){
+        alert("Couldn't verify the token right now. Please try again.");
+      } else {
+        const repoInfo = await response.json();
+        const canWrite = !!(repoInfo.permissions && repoInfo.permissions.push);
+        if(!canWrite){
+          alert("This token is valid but doesn't have write access to this repository, so changes can't be saved.");
+        } else {
+          adminToken = token;
+          isAdmin = true;
+          document.getElementById('admin-badge').style.display = "inline-block";
+          render();
+        }
+      }
+    }catch(err){
+      console.error(err);
+      alert("Network error while verifying the token. Please try again.");
+    } finally {
+      loadingEl.style.display = "none";
     }
   });
 
