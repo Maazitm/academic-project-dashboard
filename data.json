@@ -6,7 +6,8 @@
     "phone": "9075934809",
     "roll": "1143",
     "hasProject": true,
-    "attendance": 90
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "phone": "9270484635",
     "roll": "1145",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "phone": "9421859194",
     "roll": "1146",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "phone": "7741004382",
     "roll": "1148",
     "hasProject": true,
-    "attendance": 90
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "phone": "9420548803",
     "roll": "1150",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "phone": "8208520948",
     "roll": "1153",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "phone": "9356293890",
     "roll": "1158",
     "hasProject": true,
-    "attendance": 80
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "phone": "9545537557",
     "roll": "1167",
     "hasProject": true,
-    "attendance": 90
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "phone": "7058398278",
     "roll": "1168",
     "hasProject": true,
-    "attendance": 90
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "phone": "9172874698",
     "roll": "1176",
     "hasProject": true,
-    "attendance": 0
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "phone": "9579491801",
     "roll": "1177",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "phone": "7414957679",
     "roll": "1178",
     "hasProject": true,
-    "attendance": 70
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "phone": "9373650096",
     "roll": "1179",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "phone": "8010807422",
     "roll": "1180",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "phone": "7019518942",
     "roll": "1181",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "phone": "8208017309",
     "roll": "1195",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "phone": "7020992548",
     "roll": "1196",
     "hasProject": true,
-    "attendance": 85
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "phone": "9834966843",
     "roll": "1198",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "phone": "9689357275",
     "roll": "1202",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 20,
@@ -177,7 +196,8 @@
     "phone": "9011710862",
     "roll": "1211",
     "hasProject": true,
-    "attendance": 55
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 21,
@@ -186,7 +206,8 @@
     "phone": "7498187335",
     "roll": "1213",
     "hasProject": true,
-    "attendance": 50
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 22,
@@ -195,7 +216,8 @@
     "phone": "7666123851",
     "roll": "1216",
     "hasProject": false,
-    "attendance": 0
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 23,
@@ -204,7 +226,8 @@
     "phone": "7709322106",
     "roll": "1217",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 24,
@@ -213,7 +236,8 @@
     "phone": "8624880096",
     "roll": "1218",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 25,
@@ -222,7 +246,8 @@
     "phone": "7888120932",
     "roll": "1231",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 26,
@@ -231,7 +256,8 @@
     "phone": "9209982090",
     "roll": "1242",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 27,
@@ -240,7 +266,8 @@
     "phone": "7776096624",
     "roll": "1243",
     "hasProject": true,
-    "attendance": 50
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 28,
@@ -249,7 +276,8 @@
     "phone": "9970809142",
     "roll": "1244",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 29,
@@ -258,7 +286,8 @@
     "phone": "7410568105",
     "roll": "1245",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 30,
@@ -267,7 +296,8 @@
     "phone": "7498432809",
     "roll": "1246",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 31,
@@ -276,7 +306,8 @@
     "phone": "9325483363",
     "roll": "1249",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 32,
@@ -285,7 +316,8 @@
     "phone": "9307253595",
     "roll": "1250",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 33,
@@ -294,7 +326,8 @@
     "phone": "7498438829",
     "roll": "1251",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 34,
@@ -303,7 +336,8 @@
     "phone": "9370907581",
     "roll": "1258",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 35,
@@ -312,7 +346,8 @@
     "phone": "8208570986",
     "roll": "1265",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 36,
@@ -321,7 +356,8 @@
     "phone": "9803033258",
     "roll": "1274",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 37,
@@ -330,7 +366,8 @@
     "phone": "8237586999",
     "roll": "1279",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 38,
@@ -339,7 +376,8 @@
     "phone": "7620388550",
     "roll": "1286",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 39,
@@ -348,7 +386,8 @@
     "phone": "9699367687",
     "roll": "1290",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 40,
@@ -357,7 +396,8 @@
     "phone": "8459550296",
     "roll": "1291",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 41,
@@ -366,7 +406,8 @@
     "phone": "9637006158",
     "roll": "1292",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 42,
@@ -375,7 +416,8 @@
     "phone": "8830242525",
     "roll": "1336",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 43,
@@ -384,7 +426,8 @@
     "phone": "9307275670",
     "roll": "1338",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 44,
@@ -393,7 +436,8 @@
     "phone": "8793251731",
     "roll": "1339",
     "hasProject": false,
-    "attendance": 50
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 45,
@@ -402,7 +446,8 @@
     "phone": "9359455679",
     "roll": "1340",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 46,
@@ -411,7 +456,8 @@
     "phone": "9922122446",
     "roll": "1347",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 47,
@@ -420,7 +466,8 @@
     "phone": "9075431575",
     "roll": "1349",
     "hasProject": true,
-    "attendance": 80
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 48,
@@ -429,7 +476,8 @@
     "phone": "9067060115",
     "roll": "1381",
     "hasProject": true,
-    "attendance": 75
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 49,
@@ -438,7 +486,8 @@
     "phone": "7058576654",
     "roll": "1387",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 50,
@@ -447,7 +496,8 @@
     "phone": "9923315049",
     "roll": "1390",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 51,
@@ -456,7 +506,8 @@
     "phone": "8919304140",
     "roll": "1412",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 52,
@@ -465,7 +516,8 @@
     "phone": "7843055687",
     "roll": "1419",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 53,
@@ -474,7 +526,8 @@
     "phone": "7720887561",
     "roll": "1420",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 54,
@@ -483,7 +536,8 @@
     "phone": "7972426447",
     "roll": "1432",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 55,
@@ -492,7 +546,8 @@
     "phone": "7249655470",
     "roll": "1434",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 56,
@@ -501,7 +556,8 @@
     "phone": "9011130637",
     "roll": "1437",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 57,
@@ -510,7 +566,8 @@
     "phone": "9359636762",
     "roll": "1438",
     "hasProject": true,
-    "attendance": 80
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 58,
@@ -519,7 +576,8 @@
     "phone": "9623169308",
     "roll": "1440",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 59,
@@ -528,7 +586,8 @@
     "phone": "7888231801",
     "roll": "1441",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 60,
@@ -537,7 +596,8 @@
     "phone": "9356410634",
     "roll": "1447",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 61,
@@ -546,7 +606,8 @@
     "phone": "9623757778",
     "roll": "1448",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 62,
@@ -555,7 +616,8 @@
     "phone": "8329870524",
     "roll": "1449",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 63,
@@ -564,7 +626,8 @@
     "phone": "8010462654",
     "roll": "1450",
     "hasProject": true,
-    "attendance": 90
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 64,
@@ -573,7 +636,8 @@
     "phone": "7588719115",
     "roll": "1452",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 65,
@@ -582,7 +646,8 @@
     "phone": "-",
     "roll": "1453",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 66,
@@ -591,7 +656,8 @@
     "phone": "8080594449",
     "roll": "1457",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 67,
@@ -600,7 +666,8 @@
     "phone": "8010936282",
     "roll": "1458",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 68,
@@ -609,7 +676,8 @@
     "phone": "9960684704",
     "roll": "1459",
     "hasProject": true,
-    "attendance": 75
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 69,
@@ -618,7 +686,8 @@
     "phone": "9226688220",
     "roll": "1460",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 70,
@@ -627,7 +696,8 @@
     "phone": "8010251953",
     "roll": "1461",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 71,
@@ -636,7 +706,8 @@
     "phone": "7620392130",
     "roll": "1462",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 72,
@@ -645,7 +716,8 @@
     "phone": "9823280358",
     "roll": "1463",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 73,
@@ -654,7 +726,8 @@
     "phone": "9529751409",
     "roll": "1464",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 74,
@@ -663,7 +736,8 @@
     "phone": "9579041983",
     "roll": "1472",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 75,
@@ -672,7 +746,8 @@
     "phone": "8308558870",
     "roll": "1481",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 76,
@@ -681,7 +756,8 @@
     "phone": "9359826663",
     "roll": "1482",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 77,
@@ -690,7 +766,8 @@
     "phone": "9579680911",
     "roll": "1491",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 78,
@@ -699,7 +776,8 @@
     "phone": "9373618780",
     "roll": "1494",
     "hasProject": true,
-    "attendance": 95
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 79,
@@ -708,7 +786,8 @@
     "phone": "8605044265",
     "roll": "1495",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 80,
@@ -717,7 +796,8 @@
     "phone": "9730852776",
     "roll": "1496",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 81,
@@ -726,7 +806,8 @@
     "phone": "7823817414",
     "roll": "1497",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 82,
@@ -735,7 +816,8 @@
     "phone": "7038399019",
     "roll": "1501",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 83,
@@ -744,7 +826,8 @@
     "phone": "9028152941",
     "roll": "1503",
     "hasProject": false,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 84,
@@ -753,7 +836,8 @@
     "phone": "9552847588",
     "roll": "1504",
     "hasProject": true,
-    "attendance": null
+    "attendance": null,
+    "batch": "Flutter"
   },
   {
     "id": 85,
@@ -762,6 +846,7 @@
     "phone": "9112467074",
     "roll": "1506",
     "hasProject": true,
-    "attendance": 50
+    "attendance": null,
+    "batch": "Flutter"
   }
 ]
