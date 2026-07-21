@@ -356,7 +356,7 @@
     "phone": "9272095234",
     "roll": "1430",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 80,
     "batch": "Web Development"
   },
   {
