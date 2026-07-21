@@ -14,7 +14,7 @@
   { "id": 13, "name": "Akanksha Biradar", "email": "biradarakanksha1@gmail.com", "phone": "9373650096", "roll": "1179", "hasProject": true },
   { "id": 14, "name": "Rohini Miratkar", "email": "rmiratkar22@gmail.com", "phone": "8010807422", "roll": "1180", "hasProject": true },
   { "id": 15, "name": "Pallavi Belure", "email": "pallavibelure8@gmail.com", "phone": "7019518942", "roll": "1181", "hasProject": false },
-  { "id": 16, "name": "Rutuja Narmitwar", "email": "narmitwarrutuja@gmail.com", "phone": "8208017309", "roll": "1195", "hasProject": false },
+  { "id": 16, "name": "Rutuja Narmitwar", "email": "narmitwarrutuja@gmail.com", "phone": "8208017309", "roll": "1195", "hasProject": true },
   { "id": 17, "name": "Swaraj Kale", "email": "swarajsk2008@gmail.com", "phone": "7020992548", "roll": "1196", "hasProject": true },
   { "id": 18, "name": "Mansi Madge", "email": "madgemansi71@gmail.com", "phone": "9834966843", "roll": "1198", "hasProject": true },
   { "id": 19, "name": "Ruchita Betkar Betkar", "email": "betkarruchita534@gmail.com", "phone": "9689357275", "roll": "1202", "hasProject": true },
