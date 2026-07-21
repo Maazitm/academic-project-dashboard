@@ -86,7 +86,7 @@
     "phone": "9325142621",
     "roll": "1253",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Web Development"
   },
   {
