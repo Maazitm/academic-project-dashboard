@@ -376,7 +376,7 @@
     "phone": "9545865834",
     "roll": "1435",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 60,
     "batch": "Web Development"
   },
   {
