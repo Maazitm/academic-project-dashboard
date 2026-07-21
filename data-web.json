@@ -276,7 +276,7 @@
     "phone": "9664099947",
     "roll": "1356",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Web Development"
   },
   {
