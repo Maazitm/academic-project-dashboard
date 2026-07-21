@@ -366,7 +366,7 @@
     "phone": "8600241140",
     "roll": "1431",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 40,
     "batch": "Web Development"
   },
   {
