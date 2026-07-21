@@ -66,7 +66,7 @@
   { "id": 65, "name": "Vaishu Devkamble", "email": "Vaishudevkamble@gmail.com", "phone": "-", "roll": "1453", "hasProject": true },
   { "id": 66, "name": "Sonali Bokare", "email": "bokaresonali9@gmail.com", "phone": "8080594449", "roll": "1457", "hasProject": true },
   { "id": 67, "name": "Khushi Bhorge", "email": "khushibhorge86@gmail.com", "phone": "8010936282", "roll": "1458", "hasProject": true },
-  { "id": 68, "name": "Vaishu Patil", "email": "vaishupatil630@gmail.com", "phone": "9960684704", "roll": "1459", "hasProject": false },
+  { "id": 68, "name": "Vaishu Patil", "email": "vaishupatil630@gmail.com", "phone": "9960684704", "roll": "1459", "hasProject": true },
   { "id": 69, "name": "Jyoti Bokare", "email": "jyotibokare6@gmail.com", "phone": "9226688220", "roll": "1460", "hasProject": true },
   { "id": 70, "name": "Aditi Bhorge", "email": "aditibhorge@gmail.com", "phone": "8010251953", "roll": "1461", "hasProject": true },
   { "id": 71, "name": "Parth Panewar", "email": "parthpanewar07@gmail.com", "phone": "7620392130", "roll": "1462", "hasProject": true },
