@@ -83,5 +83,5 @@
   { "id": 82, "name": "Sanjana Gaikwad", "email": "sanjanagaikwad2590@gmail.com", "phone": "7038399019", "roll": "1501", "hasProject": true },
   { "id": 83, "name": "Hemant Dhadve Dhadve", "email": "dhadvehemant3@gmail.com", "phone": "9028152941", "roll": "1503", "hasProject": false },
   { "id": 84, "name": "Vyankatesh Siraskar", "email": "vyankateshsiraskar3@gmail.com", "phone": "9552847588", "roll": "1504", "hasProject": true },
-  { "id": 85, "name": "Shivaji Sontakke", "email": "shivajisontakke26@gmail.com", "phone": "9112467074", "roll": "1506", "hasProject": false }
+  { "id": 85, "name": "Shivaji Sontakke", "email": "shivajisontakke26@gmail.com", "phone": "9112467074", "roll": "1506", "hasProject": true }
 ]
