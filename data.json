@@ -46,7 +46,7 @@
   { "id": 45, "name": "Vaishnavi Pawar", "email": "vp413207@gmail.com", "phone": "9359455679", "roll": "1340", "hasProject": true },
   { "id": 46, "name": "Shaikh Sufiyan", "email": "sufiyantaj440@gmail.com", "phone": "9922122446", "roll": "1347", "hasProject": true },
   { "id": 47, "name": "Adil Mohammad", "email": "adilmohammad786785@gmail.com", "phone": "9075431575", "roll": "1349", "hasProject": true },
-  { "id": 48, "name": "Abdullah Khan", "email": "khanabdullah16214@gmail.com", "phone": "9067060115", "roll": "1381", "hasProject": false },
+  { "id": 48, "name": "Abdullah Khan", "email": "khanabdullah16214@gmail.com", "phone": "9067060115", "roll": "1381", "hasProject": true },
   { "id": 49, "name": "Rohit Bhosale", "email": "bhosalerohit837@gmail.com", "phone": "7058576654", "roll": "1387", "hasProject": false },
   { "id": 50, "name": "Gajanan Asegaonkar", "email": "asegaonkargajanan7@gmail.com", "phone": "9923315049", "roll": "1390", "hasProject": false },
   { "id": 51, "name": "parmeshwarade Ade", "email": "parmeshwaradeade@gmail.com", "phone": "8919304140", "roll": "1412", "hasProject": true },
