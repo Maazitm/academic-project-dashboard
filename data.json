@@ -586,7 +586,7 @@
     "phone": "7888231801",
     "roll": "1441",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 80,
     "batch": "Flutter"
   },
   {
