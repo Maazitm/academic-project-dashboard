@@ -436,7 +436,7 @@
     "phone": "8793251731",
     "roll": "1339",
     "hasProject": false,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Flutter"
   },
   {
