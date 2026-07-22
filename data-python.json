@@ -505,7 +505,7 @@
     "email": "poonamkurhe07@gmail.com",
     "phone": "7822071951",
     "roll": "1326",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
