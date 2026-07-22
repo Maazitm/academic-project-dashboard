@@ -795,7 +795,7 @@
     "email": "rudrakashkurude@gmail.com",
     "phone": "7219871797",
     "roll": "1442",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
