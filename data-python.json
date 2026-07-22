@@ -315,7 +315,7 @@
     "email": "fsk79021@gmail.com",
     "phone": "7385245373",
     "roll": "1234",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
