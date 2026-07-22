@@ -825,7 +825,7 @@
     "email": "ap4280888@gmail.com",
     "phone": "7066949582",
     "roll": "1479",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
