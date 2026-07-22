@@ -595,7 +595,7 @@
     "email": "avinashjain1289@gmail.com",
     "phone": "7820832097",
     "roll": "1374",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
