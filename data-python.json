@@ -2,603 +2,861 @@
   {
     "id": 1,
     "name": "Shreya Yelke",
-    "roll": "1147",
+    "email": "shreyayelke@gmail.com",
     "phone": "9284128273",
-    "hasProject": false
+    "roll": "1147",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 2,
     "name": "Samiksha Kamble",
-    "roll": "1149",
+    "email": "kamblesamiksha176@gmail.com",
     "phone": "9529257268",
-    "hasProject": false
+    "roll": "1149",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 3,
     "name": "Apurva Wadje",
-    "roll": "1154",
+    "email": "apurvawadje45@gmail.com",
     "phone": "7821805279",
-    "hasProject": false
+    "roll": "1154",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 4,
     "name": "Gauravi Pande",
-    "roll": "1155",
+    "email": "gauravipande2008@gmail.com",
     "phone": "9175350614",
-    "hasProject": true
+    "roll": "1155",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 5,
     "name": "Abhilasha Magare",
-    "roll": "1157",
+    "email": "magareabhilasha604@gmail.com",
     "phone": "8468948055",
-    "hasProject": false
+    "roll": "1157",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 6,
     "name": "HUSSAINKHAN FEROZKHAN PATHAN",
-    "roll": "1160",
+    "email": "reyyan492009@gmail.com",
     "phone": "7775001905",
-    "hasProject": false
+    "roll": "1160",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 7,
     "name": "Tanvi Athwale",
-    "roll": "1162",
+    "email": "tanviathwale33@gmail.com",
     "phone": "7030814316",
-    "hasProject": true
+    "roll": "1162",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 8,
     "name": "Ansari Abdul Haris Abdul Shafi",
-    "roll": "1166",
+    "email": "hareansari007@gmail.com",
     "phone": "9145302215",
-    "hasProject": true
+    "roll": "1166",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 9,
     "name": "Prathamesh Agalave",
-    "roll": "1169",
+    "email": "prathameshagalave38@gmail.com",
     "phone": "9307994066",
-    "hasProject": true
+    "roll": "1169",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 10,
     "name": "Aditi Phulari",
-    "roll": "1171",
+    "email": "phulariaditi3@gmail.com",
     "phone": "9209533179",
-    "hasProject": false
+    "roll": "1171",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 11,
     "name": "Vedika Bende",
-    "roll": "1172",
+    "email": "vedikabende913@gmail.com",
     "phone": "9370369750",
-    "hasProject": false
+    "roll": "1172",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 12,
     "name": "Vaishnavi Choudhari",
-    "roll": "1174",
+    "email": "vaishnavichoudhari190@gmail.com",
     "phone": "9284492912",
-    "hasProject": false
+    "roll": "1174",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 13,
     "name": "Yelke Rekha Nagorao",
-    "roll": "1175",
+    "email": "magrekimi@gmail.com",
     "phone": "9226758535",
-    "hasProject": true
+    "roll": "1175",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 14,
     "name": "Shripad Joshi Joshi",
-    "roll": "1186",
+    "email": "shripadjoshi234@gmail.com",
     "phone": "7822040995",
-    "hasProject": true
+    "roll": "1186",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 15,
     "name": "Meera jawanjal Jawanjal",
-    "roll": "1187",
+    "email": "meerajawanjaljawanjal@gmail.com",
     "phone": "9579433041",
-    "hasProject": false
+    "roll": "1187",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 16,
     "name": "Mansi Narwade",
-    "roll": "1194",
+    "email": "narwademansi160@gmail.com",
     "phone": "9226403348",
-    "hasProject": false
+    "roll": "1194",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 17,
     "name": "Swara Bhadke",
-    "roll": "1197",
+    "email": "bhadkevarsha33@gmail.com",
     "phone": "9325001518",
-    "hasProject": false
+    "roll": "1197",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 18,
     "name": "yogita Yersanwar",
-    "roll": "1203",
+    "email": "yogitayersanwar@gmail.com",
     "phone": "8956564399",
-    "hasProject": true
+    "roll": "1203",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 19,
     "name": "Vedika Jadhav",
-    "roll": "1204",
+    "email": "jadhavvedika1213@gmail.com",
     "phone": "8767280087",
-    "hasProject": true
+    "roll": "1204",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 20,
     "name": "Durga Jadhav",
-    "roll": "1205",
+    "email": "durgajadhav329@gmail.com",
     "phone": "8793221141",
-    "hasProject": true
+    "roll": "1205",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 21,
     "name": "Gayatri Sakole",
-    "roll": "1206",
+    "email": "sakolegayatri@gmail.com",
     "phone": "9049402037",
-    "hasProject": false
+    "roll": "1206",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 22,
     "name": "Sumit Jadhav",
-    "roll": "1207",
+    "email": "sumitmjadhav2008@gmail.com",
     "phone": "7620082292",
-    "hasProject": false
+    "roll": "1207",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 23,
     "name": "Sandhya K.p Abdagire",
-    "roll": "1209",
+    "email": "kpsandhya95@gmail.com",
     "phone": "7499167226",
-    "hasProject": false
+    "roll": "1209",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 24,
     "name": "Parth Farkande",
-    "roll": "1210",
+    "email": "farkandeparth007@gmail.com",
     "phone": "8010162769",
-    "hasProject": false
+    "roll": "1210",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 25,
     "name": "Radheshyam Karale",
-    "roll": "1212",
+    "email": "radheshyamkarale64@gmail.com",
     "phone": "9766824270",
-    "hasProject": true
+    "roll": "1212",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 26,
     "name": "Mohit Dewoolkar",
-    "roll": "1214",
+    "email": "mohitdewoolkar8080@gmail.com",
     "phone": "8080452985",
-    "hasProject": false
+    "roll": "1214",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 27,
     "name": "Govind Kadam",
-    "roll": "1215",
+    "email": "govindkadam947@gmail.com",
     "phone": "9370468770",
-    "hasProject": false
+    "roll": "1215",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 28,
     "name": "sayali chavan",
-    "roll": "1221",
+    "email": "sayalichavan932553@gmail.com",
     "phone": "9834642296",
-    "hasProject": false
+    "roll": "1221",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 29,
     "name": "Supriya Ambhore",
-    "roll": "1222",
+    "email": "supriyaambhore51@gmail.com",
     "phone": "8261025845",
-    "hasProject": false
+    "roll": "1222",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 30,
     "name": "Supriya Harane",
-    "roll": "1232",
+    "email": "supriyaharane28@gmail.com",
     "phone": "7499260008",
-    "hasProject": false
+    "roll": "1232",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 31,
     "name": "Syed ahsan Syed",
-    "roll": "1233",
+    "email": "syedahsanali2024@gmail.com",
     "phone": "8482935998",
-    "hasProject": false
+    "roll": "1233",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 32,
     "name": "Mohammad Farhan Mohammad Iliyas",
-    "roll": "1234",
+    "email": "fsk79021@gmail.com",
     "phone": "7385245373",
-    "hasProject": false
+    "roll": "1234",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 33,
     "name": "Janhavi Devde",
-    "roll": "1240",
+    "email": "janhavidevde89@gmail.com",
     "phone": "8830004928",
-    "hasProject": false
+    "roll": "1240",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 34,
     "name": "Vedant Awchar",
-    "roll": "1247",
+    "email": "awcharvedant2@gmail.com",
     "phone": "9307894445",
-    "hasProject": false
+    "roll": "1247",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 35,
     "name": "Bajrang Tokalwad",
-    "roll": "1263",
+    "email": "tokalwadbajrang123@gmail.com",
     "phone": "8530699088",
-    "hasProject": false
+    "roll": "1263",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 36,
     "name": "Mayuri Deshmukh",
-    "roll": "1266",
+    "email": "mayurideshm160@gmail.com",
     "phone": "-",
-    "hasProject": false
+    "roll": "1266",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 37,
     "name": "Anushka Yengade",
-    "roll": "1267",
+    "email": "anushkayengade07@gmail.com",
     "phone": "8010780559",
-    "hasProject": false
+    "roll": "1267",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 38,
     "name": "Nalini Davane",
-    "roll": "1268",
+    "email": "nalinidavane76@gmail.com",
     "phone": "9763457571",
-    "hasProject": false
+    "roll": "1268",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 39,
     "name": "Jotsana Jadhav",
-    "roll": "1269",
+    "email": "jadhavjotsana0@gmail.com",
     "phone": "8530710651",
-    "hasProject": false
+    "roll": "1269",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 40,
     "name": "Kalyani Gaikwad",
-    "roll": "1270",
+    "email": "kalyanigaikwad702@gmail.com",
     "phone": "9130795897",
-    "hasProject": false
+    "roll": "1270",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 41,
     "name": "Varsha Hatkar",
-    "roll": "1271",
+    "email": "varshah245@gmail.com",
     "phone": "7030086732",
-    "hasProject": false
+    "roll": "1271",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 42,
     "name": "Abhishek Gangji",
-    "roll": "1272",
+    "email": "abhishekgangji90@gmail.com",
     "phone": "8408040896",
-    "hasProject": false
+    "roll": "1272",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 43,
     "name": "Shashikant Kanzade",
-    "roll": "1273",
+    "email": "shashikanzade@gmail.com",
     "phone": "7030709754",
-    "hasProject": false
+    "roll": "1273",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 44,
     "name": "Shruti Sarode",
-    "roll": "1277",
+    "email": "shrutisarode900@gmail.com",
     "phone": "9529132230",
-    "hasProject": true
+    "roll": "1277",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 45,
     "name": "Gayatri Bhise",
-    "roll": "1285",
+    "email": "gayatribhise412@gmail.com",
     "phone": "7248941687",
-    "hasProject": true
+    "roll": "1285",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 46,
     "name": "Santoshi Shrungare",
-    "roll": "1289",
+    "email": "santhoshishrungare@gmail.com",
     "phone": "8010022572",
-    "hasProject": false
+    "roll": "1289",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 47,
     "name": "Kartik Satpute",
-    "roll": "1302",
+    "email": "kartiksatpute2008@gmail.com",
     "phone": "9960696181",
-    "hasProject": false
+    "roll": "1302",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 48,
     "name": "Kulkarni Sudhanwa",
-    "roll": "1308",
+    "email": "kulkarnisudhanwa09@gmail.com",
     "phone": "7219538587",
-    "hasProject": true
+    "roll": "1308",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 49,
     "name": "Devidas Kulkarni",
-    "roll": "1309",
+    "email": "deva72199665@gmail.com",
     "phone": "7219438587",
-    "hasProject": true
+    "roll": "1309",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 50,
     "name": "Omkar Mane",
-    "roll": "1325",
+    "email": "omkarmane90111@gmail.com",
     "phone": "8605511678",
-    "hasProject": false
+    "roll": "1325",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 51,
     "name": "Poonam Kurhe",
-    "roll": "1326",
+    "email": "poonamkurhe07@gmail.com",
     "phone": "7822071951",
-    "hasProject": false
+    "roll": "1326",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 52,
     "name": "Gayatri Hippale",
-    "roll": "1328",
+    "email": "gayatrihippale@gmail.com",
     "phone": "9209341992",
-    "hasProject": false
+    "roll": "1328",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 53,
     "name": "Disha Kamore",
-    "roll": "1330",
+    "email": "dishakamore@gmail.com",
     "phone": "7498072874",
-    "hasProject": false
+    "roll": "1330",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 54,
     "name": "Mokshada Magar",
-    "roll": "1345",
+    "email": "mokshadamagar@gmail.com",
     "phone": "8830598209",
-    "hasProject": true
+    "roll": "1345",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 55,
     "name": "Mohini Sonavne",
-    "roll": "1346",
+    "email": "mohinisonavne7@gmail.com",
     "phone": "9307432702",
-    "hasProject": true
+    "roll": "1346",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 56,
     "name": "VAISHNAV MUDHAL",
-    "roll": "1352",
+    "email": "vaishnavxfiverr@gmail.com",
     "phone": "7028500279",
-    "hasProject": false
+    "roll": "1352",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 57,
     "name": "Shubham Kesgire",
-    "roll": "1355",
+    "email": "shubhamkesgire8@gmail.com",
     "phone": "7798213091",
-    "hasProject": false
+    "roll": "1355",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 58,
     "name": "Mohammed Musaddiq",
-    "roll": "1357",
+    "email": "musaddiq8mm@gmail.com",
     "phone": "7276614080",
-    "hasProject": false
+    "roll": "1357",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 59,
     "name": "Achyut Mudgure",
-    "roll": "1370",
+    "email": "achyutmudgure@gmail.com",
     "phone": "7822868223",
-    "hasProject": false
+    "roll": "1370",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 60,
     "name": "Abhishek Jambure",
-    "roll": "1374",
+    "email": "avinashjain1289@gmail.com",
     "phone": "7820832097",
-    "hasProject": false
+    "roll": "1374",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 61,
     "name": "Sarthaki",
-    "roll": "1377",
+    "email": "sarthakikanchangire7@gmail.com",
     "phone": "9284141749",
-    "hasProject": true
+    "roll": "1377",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 62,
     "name": "Pranav Suryawanshi",
-    "roll": "1379",
+    "email": "pranavsuryawanshiz05@gmail.com",
     "phone": "9209794772",
-    "hasProject": false
+    "roll": "1379",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 63,
     "name": "Shweta Dalvi",
-    "roll": "1383",
+    "email": "shwetadalvi287@gmail.com",
     "phone": "9834808069",
-    "hasProject": false
+    "roll": "1383",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 64,
     "name": "Shubham Ingole",
-    "roll": "1391",
+    "email": "rahulingole478@gmail.com",
     "phone": "-",
-    "hasProject": false
+    "roll": "1391",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 65,
     "name": "Rushikesh Manewad",
-    "roll": "1392",
+    "email": "rushikeshmanewad@gmail.com",
     "phone": "7620394475",
-    "hasProject": false
+    "roll": "1392",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 66,
     "name": "Sanika Dadhale",
-    "roll": "1394",
+    "email": "sanikadadhale@gmail.com",
     "phone": "9422863832",
-    "hasProject": true
+    "roll": "1394",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 67,
     "name": "Om laxmikant kotgire Kotgire",
-    "roll": "1395",
+    "email": "omkotgir5457@gmail.com",
     "phone": "9545215457",
-    "hasProject": false
+    "roll": "1395",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 68,
     "name": "Aditya Dukare",
-    "roll": "1399",
+    "email": "adityadukare499@gmail.com",
     "phone": "7620372314",
-    "hasProject": false
+    "roll": "1399",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 69,
     "name": "Prashik Sadawarte",
-    "roll": "1400",
+    "email": "prashiksadavarte0358@gmail.com",
     "phone": "9421270358",
-    "hasProject": false
+    "roll": "1400",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 70,
     "name": "Shivani Magar",
-    "roll": "1402",
+    "email": "magarshivani7823@gmail.com",
     "phone": "9529026976",
-    "hasProject": false
+    "roll": "1402",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 71,
     "name": "Shreya Kapse",
-    "roll": "1405",
+    "email": "shreyakapse2008@gmail.com",
     "phone": "7498063134",
-    "hasProject": false
+    "roll": "1405",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 72,
     "name": "Rutuja Ubale ubale",
-    "roll": "1407",
+    "email": "rutujaubale917@gmail.com",
     "phone": "9172477189",
-    "hasProject": true
+    "roll": "1407",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 73,
     "name": "Partiksha Kamble",
-    "roll": "1408",
+    "email": "kamblepartiksha5@gmail.com",
     "phone": "7972665498",
-    "hasProject": false
+    "roll": "1408",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 74,
     "name": "Pooja Patil",
-    "roll": "1413",
+    "email": "patilpooja0826@gmail.com",
     "phone": "8830848602",
-    "hasProject": false
+    "roll": "1413",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 75,
     "name": "Bhagwat More",
-    "roll": "1415",
+    "email": "bhagwatmore45@gmail.com",
     "phone": "8261947131",
-    "hasProject": false
+    "roll": "1415",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 76,
     "name": "Ds Soham",
-    "roll": "1416",
+    "email": "dssoham15@gmail.com",
     "phone": "9665008781",
-    "hasProject": true
+    "roll": "1416",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 77,
     "name": "Muktai Chavan chavan",
-    "roll": "1417",
+    "email": "muktaichavan349@gmail.com",
     "phone": "9146842915",
-    "hasProject": false
+    "roll": "1417",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 78,
     "name": "Ayush Manjaramkar",
-    "roll": "1418",
+    "email": "ayushmanjaramkar742@gmail.com",
     "phone": "8767403644",
-    "hasProject": false
+    "roll": "1418",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 79,
     "name": "Mahesh kamble",
-    "roll": "1423",
+    "email": "maheshkamble532007@gmail.com",
     "phone": "9270346035",
-    "hasProject": false
+    "roll": "1423",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 80,
     "name": "Rudrakash Kurude",
-    "roll": "1442",
+    "email": "rudrakashkurude@gmail.com",
     "phone": "7219871797",
-    "hasProject": false
+    "roll": "1442",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 81,
     "name": "Tushar Murkute",
-    "roll": "1456",
+    "email": "tusharmurkute2013@gmail.com",
     "phone": "9518711947",
-    "hasProject": false
+    "roll": "1456",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 82,
     "name": "Abhishek Suryawanshi",
-    "roll": "1465",
+    "email": "suryawanshiabhishek804@gmail.com",
     "phone": "8668336345",
-    "hasProject": false
+    "roll": "1465",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 83,
     "name": "Ankita Pawar",
-    "roll": "1479",
+    "email": "ap4280888@gmail.com",
     "phone": "7066949582",
-    "hasProject": false
+    "roll": "1479",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 84,
     "name": "Tanuja Ghumbre",
-    "roll": "1483",
+    "email": "tanvighumbre285@gmail.com",
     "phone": "9552079271",
-    "hasProject": false
+    "roll": "1483",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 85,
     "name": "Vedant Rajegore",
-    "roll": "1502",
+    "email": "vedantrajegore77@gmail.com",
     "phone": "9373942861",
-    "hasProject": true
+    "roll": "1502",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   },
   {
     "id": 86,
     "name": "Aniket S",
-    "roll": "1519",
+    "email": "anikets122007@gmail.com",
     "phone": "9373301145",
-    "hasProject": false
+    "roll": "1519",
+    "hasProject": false,
+    "attendance": null,
+    "batch": "Python"
   }
 ]
