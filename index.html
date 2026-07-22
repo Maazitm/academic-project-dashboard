@@ -191,17 +191,19 @@
 
   .empty-state{padding:40px; text-align:center; color:var(--ink-soft); font-size:14px;}
 
-  /* Pending rows get a soft red "needs attention" treatment, across every batch */
-  .row.is-pending{
-    background: rgba(220,38,38,0.06);
-    border-left-color: var(--danger);
-  }
-  .row.is-pending:hover{
-    background: rgba(220,38,38,0.11);
-  }
-  .row.is-pending .row-info h4{
-    color:#9A1D1D;
-  }
+/* This applies the red danger style universally */
+.row.is-pending {
+  background: rgba(220,38,38,0.06);
+  border-left-color: var(--danger);
+}
+
+.row.is-pending:hover {
+  background: rgba(220,38,38,0.11);
+}
+
+.row.is-pending .row-info h4 {
+  color: #9A1D1D; /* Turns the student's name dark red */
+}
   .row.is-pending .pill-pending{
     background:#F8B4B4; color:#7F1D1D; font-weight:700;
   }
