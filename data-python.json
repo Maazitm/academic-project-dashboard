@@ -725,7 +725,7 @@
     "email": "kamblepartiksha5@gmail.com",
     "phone": "7972665498",
     "roll": "1408",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
