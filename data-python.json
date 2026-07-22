@@ -55,7 +55,7 @@
     "email": "reyyan492009@gmail.com",
     "phone": "7775001905",
     "roll": "1160",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
