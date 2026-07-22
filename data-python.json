@@ -385,7 +385,7 @@
     "email": "jadhavjotsana0@gmail.com",
     "phone": "8530710651",
     "roll": "1269",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
