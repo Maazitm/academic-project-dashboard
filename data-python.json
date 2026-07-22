@@ -405,7 +405,7 @@
     "email": "varshah245@gmail.com",
     "phone": "7030086732",
     "roll": "1271",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
