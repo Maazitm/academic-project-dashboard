@@ -365,7 +365,7 @@
     "email": "anushkayengade07@gmail.com",
     "phone": "8010780559",
     "roll": "1267",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
