@@ -525,7 +525,7 @@
     "email": "dishakamore@gmail.com",
     "phone": "7498072874",
     "roll": "1330",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
