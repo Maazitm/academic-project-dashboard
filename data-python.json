@@ -745,7 +745,7 @@
     "email": "bhagwatmore45@gmail.com",
     "phone": "8261947131",
     "roll": "1415",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
