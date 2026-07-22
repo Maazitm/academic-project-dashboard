@@ -515,7 +515,7 @@
     "email": "gayatrihippale@gmail.com",
     "phone": "9209341992",
     "roll": "1328",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
