@@ -235,7 +235,7 @@
     "email": "farkandeparth007@gmail.com",
     "phone": "8010162769",
     "roll": "1210",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
