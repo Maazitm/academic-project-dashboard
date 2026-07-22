@@ -835,7 +835,7 @@
     "email": "tanvighumbre285@gmail.com",
     "phone": "9552079271",
     "roll": "1483",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
