@@ -246,7 +246,7 @@
     "phone": "9766824270",
     "roll": "1212",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 60,
     "batch": "Python"
   },
   {
