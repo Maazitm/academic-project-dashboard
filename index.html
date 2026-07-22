@@ -77,9 +77,10 @@
   .stat-card{
     background:var(--surface); border:1px solid var(--border); border-radius:14px;
     padding:16px 18px; box-shadow:var(--shadow-sm);
+    transition: background .2s ease, border-color .2s ease;
   }
   .stat-label{font-size:12px; color:var(--ink-soft); font-weight:600; margin:0 0 6px; text-transform:uppercase; letter-spacing:.04em;}
-  .stat-value{font-family:'Sora',sans-serif; font-size:26px; font-weight:700; margin:0;}
+  .stat-value{font-family:'Sora',sans-serif; font-size:26px; font-weight:700; margin:0; transition:color .2s ease;}
   .stat-value.accent-success{color:var(--success);}
   .stat-value.accent-amber{color:var(--amber);}
 
@@ -124,7 +125,9 @@
   .row{
     display:flex; align-items:center; gap:16px; padding:16px 20px;
     border-bottom:1px solid var(--border);
+    border-left:3px solid transparent;
     flex-wrap:wrap;
+    transition: background .2s ease, border-left-color .2s ease;
   }
   .row:last-child{border-bottom:none;}
   .row:hover{background:#FBFBFE;}
@@ -188,6 +191,25 @@
 
   .empty-state{padding:40px; text-align:center; color:var(--ink-soft); font-size:14px;}
 
+  /* Python batch: pending rows get a soft red alert treatment */
+  .list.alert-mode .row.is-pending{
+    background: rgba(220,38,38,0.045);
+    border-left-color: var(--danger);
+  }
+  .list.alert-mode .row.is-pending:hover{
+    background: rgba(220,38,38,0.08);
+  }
+  .list.alert-mode .row.is-pending .pill-pending{
+    background:#FBDADA; color:#9A1D1D;
+  }
+  .stats-row.alert-mode .stat-card.pending-card{
+    background: var(--danger-soft);
+    border-color: rgba(220,38,38,0.35);
+  }
+  .stats-row.alert-mode .stat-value.pending-value{
+    color: var(--danger);
+  }
+
   /* Footer */
   .footer{
     max-width:1180px; margin:32px auto 0; padding-top:18px; border-top:1px solid var(--border);
@@ -234,10 +256,11 @@
     <div class="batch-switch" id="batch-switch">
       <button class="batch-btn active" data-batch="flutter">Flutter</button>
       <button class="batch-btn" data-batch="web">Web Development</button>
+      <button class="batch-btn" data-batch="python">Python</button>
     </div>
   </div>
 
-  <div class="stats-row">
+  <div class="stats-row" id="stats-row">
     <div class="stat-card">
       <p class="stat-label">Total Students</p>
       <p class="stat-value" id="ledger-total">0</p>
@@ -246,9 +269,9 @@
       <p class="stat-label">Assigned</p>
       <p class="stat-value accent-success" id="ledger-assigned">0</p>
     </div>
-    <div class="stat-card">
+    <div class="stat-card pending-card">
       <p class="stat-label">Pending</p>
-      <p class="stat-value" id="ledger-pending">0</p>
+      <p class="stat-value pending-value" id="ledger-pending">0</p>
     </div>
     <div class="stat-card">
       <p class="stat-label">Avg. Attendance</p>
@@ -295,9 +318,13 @@
   // Each batch is its own JSON file in the same repo.
   const BATCHES = {
     flutter: { label: "Flutter", file: "data.json" },
-    web:     { label: "Web Development", file: "data-web.json" }
+    web:     { label: "Web Development", file: "data-web.json" },
+    python:  { label: "Python", file: "data-python.json" }
   };
   const DEFAULT_BATCH = "flutter";
+
+  // Batches that should render the "pending list" with an alert / danger look
+  const ALERT_BATCHES = new Set(["python"]);
 
   function apiUrlFor(file){
     return `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${file}`;
@@ -518,7 +545,12 @@
 
   function render(){
     const listEl = document.getElementById('student-list');
+    const statsRowEl = document.getElementById('stats-row');
     listEl.innerHTML = '';
+
+    const alertMode = ALERT_BATCHES.has(currentBatch);
+    listEl.classList.toggle('alert-mode', alertMode);
+    statsRowEl.classList.toggle('alert-mode', alertMode);
 
     let assignedCount = 0, pendingCount = 0, attSum = 0, attCount = 0;
     studentData.forEach(s => {
@@ -533,7 +565,7 @@
     } else {
       visible.forEach(s => {
         const row = document.createElement('div');
-        row.className = 'row';
+        row.className = 'row' + (!s.hasProject ? ' is-pending' : '');
         const attendanceHtml = isAdmin ? attendanceEditHtml(s) : attendanceViewHtml(s);
         const toggleBtn = isAdmin
           ? (s.hasProject
