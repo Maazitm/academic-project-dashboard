@@ -565,7 +565,7 @@
     "email": "shubhamkesgire8@gmail.com",
     "phone": "7798213091",
     "roll": "1355",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
