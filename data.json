@@ -536,7 +536,7 @@
     "phone": "7972426447",
     "roll": "1432",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 90,
     "batch": "Flutter"
   },
   {
