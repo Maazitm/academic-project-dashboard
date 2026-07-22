@@ -345,7 +345,7 @@
     "email": "tokalwadbajrang123@gmail.com",
     "phone": "8530699088",
     "roll": "1263",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
