@@ -425,7 +425,7 @@
     "email": "shashikanzade@gmail.com",
     "phone": "7030709754",
     "roll": "1273",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
