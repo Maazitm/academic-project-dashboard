@@ -705,7 +705,7 @@
     "email": "shreyakapse2008@gmail.com",
     "phone": "7498063134",
     "roll": "1405",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
