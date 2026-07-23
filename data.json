@@ -825,7 +825,7 @@
     "email": "dhadvehemant3@gmail.com",
     "phone": "9028152941",
     "roll": "1503",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Flutter"
   },
