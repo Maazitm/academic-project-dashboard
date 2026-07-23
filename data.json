@@ -826,7 +826,7 @@
     "phone": "9028152941",
     "roll": "1503",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 65,
     "batch": "Flutter"
   },
   {
