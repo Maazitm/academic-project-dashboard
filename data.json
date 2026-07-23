@@ -816,7 +816,7 @@
     "phone": "7038399019",
     "roll": "1501",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 55,
     "batch": "Flutter"
   },
   {
