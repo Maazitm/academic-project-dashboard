@@ -435,7 +435,7 @@
     "email": "arthavnangare@gmail.com",
     "phone": "8793251731",
     "roll": "1339",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 55,
     "batch": "Flutter"
   },
