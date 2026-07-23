@@ -355,7 +355,7 @@
     "email": "jaranderohan30@gmail.com",
     "phone": "9803033258",
     "roll": "1274",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 55,
     "batch": "Flutter"
   },
