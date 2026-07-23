@@ -415,7 +415,7 @@
     "email": "abhishekgangji90@gmail.com",
     "phone": "8408040896",
     "roll": "1272",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
