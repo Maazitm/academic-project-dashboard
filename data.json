@@ -525,7 +525,7 @@
     "email": "murkuteganesh23@gmail.com",
     "phone": "7720887561",
     "roll": "1420",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 5,
     "batch": "Flutter"
   },
