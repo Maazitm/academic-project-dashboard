@@ -526,7 +526,7 @@
     "phone": "8421146838",
     "roll": "1524",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Web Development"
   },
   {
