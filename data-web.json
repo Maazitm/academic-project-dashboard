@@ -525,7 +525,7 @@
     "email": "shaikhshahed650@gmail.com",
     "phone": "8421146838",
     "roll": "1524",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Web Development"
   },
