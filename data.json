@@ -686,7 +686,7 @@
     "phone": "9226688220",
     "roll": "1460",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 70,
     "batch": "Flutter"
   },
   {
