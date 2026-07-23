@@ -526,7 +526,7 @@
     "phone": "7720887561",
     "roll": "1420",
     "hasProject": false,
-    "attendance": null,
+    "attendance": 5,
     "batch": "Flutter"
   },
   {
