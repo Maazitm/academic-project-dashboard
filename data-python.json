@@ -215,7 +215,7 @@
     "email": "sumitmjadhav2008@gmail.com",
     "phone": "7620082292",
     "roll": "1207",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
