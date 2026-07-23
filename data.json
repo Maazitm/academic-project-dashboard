@@ -425,7 +425,7 @@
     "email": "saroderitesh146@gmail.com",
     "phone": "9307275670",
     "roll": "1338",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Flutter"
   },
