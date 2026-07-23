@@ -596,7 +596,7 @@
     "phone": "7820832097",
     "roll": "1374",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Python"
   },
   {
