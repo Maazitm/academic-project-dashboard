@@ -335,7 +335,7 @@
     "email": "awcharvedant2@gmail.com",
     "phone": "9307894445",
     "roll": "1247",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 70,
     "batch": "Python"
   },
