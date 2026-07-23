@@ -495,7 +495,7 @@
     "email": "omkarmane90111@gmail.com",
     "phone": "8605511678",
     "roll": "1325",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
