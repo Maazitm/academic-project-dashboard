@@ -346,7 +346,7 @@
     "phone": "8208570986",
     "roll": "1265",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 80,
     "batch": "Flutter"
   },
   {
