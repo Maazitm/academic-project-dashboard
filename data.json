@@ -456,7 +456,7 @@
     "phone": "9922122446",
     "roll": "1347",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 60,
     "batch": "Flutter"
   },
   {
