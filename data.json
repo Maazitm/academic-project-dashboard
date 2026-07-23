@@ -375,7 +375,7 @@
     "email": "prashantpawar7477s@gmail.com",
     "phone": "7620388550",
     "roll": "1286",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 60,
     "batch": "Flutter"
   },
