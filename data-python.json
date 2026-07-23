@@ -785,7 +785,7 @@
     "email": "maheshkamble532007@gmail.com",
     "phone": "9270346035",
     "roll": "1423",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Python"
   },
