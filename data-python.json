@@ -878,5 +878,25 @@
     "hasProject": true,
     "attendance": 60,
     "batch": "Python"
+  },
+  {
+    "id": 89,
+    "name": "Champati Suryawanshi",
+    "email": "pranavsuryawanshiz05@gmail.com",
+    "phone": "9209794772",
+    "roll": "1379",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
+  },
+  {
+    "id": 90,
+    "name": "Shivam Khulkhule",
+    "email": "shivamkhulkhule71@gmail.com",
+    "phone": "9075404578",
+    "roll": "1425",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   }
 ]
