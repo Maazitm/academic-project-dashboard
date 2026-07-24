@@ -858,7 +858,8 @@
     "hasProject": false,
     "attendance": null,
     "batch": "Python"
-  }  {
+  },
+  {
     "id": 87,
     "name": "Rohit shinde",
     "email": "rohitshinde917219@gmail.com",
@@ -867,7 +868,8 @@
     "hasProject": true,
     "attendance": null,
     "batch": "Python"
-  }{
+  },
+  {
     "id": 88,
     "name": "Shreya Thamke thamke",
     "email": "shreyathamke99@gmail.com",
