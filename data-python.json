@@ -896,7 +896,7 @@
     "phone": "9075404578",
     "roll": "1425",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 40,
     "batch": "Python"
   }
 ]
