@@ -855,7 +855,7 @@
     "email": "anikets122007@gmail.com",
     "phone": "9373301145",
     "roll": "1519",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 40,
     "batch": "Python"
   },
