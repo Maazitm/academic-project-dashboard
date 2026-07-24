@@ -575,7 +575,7 @@
     "email": "musaddiq8mm@gmail.com",
     "phone": "7276614080",
     "roll": "1357",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 75,
     "batch": "Python"
   },
