@@ -286,7 +286,7 @@
     "phone": "7410568105",
     "roll": "1245",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 55,
     "batch": "Flutter"
   },
   {
