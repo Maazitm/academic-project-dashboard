@@ -806,7 +806,7 @@
     "phone": "9518711947",
     "roll": "1456",
     "hasProject": false,
-    "attendance": null,
+    "attendance": 50,
     "batch": "Python"
   },
   {
