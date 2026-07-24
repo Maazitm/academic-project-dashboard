@@ -805,7 +805,7 @@
     "email": "tusharmurkute2013@gmail.com",
     "phone": "9518711947",
     "roll": "1456",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 50,
     "batch": "Python"
   },
