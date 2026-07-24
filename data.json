@@ -325,7 +325,7 @@
     "email": "aratiuttamkamble@gmail.com",
     "phone": "7498438829",
     "roll": "1251",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 55,
     "batch": "Flutter"
   },
