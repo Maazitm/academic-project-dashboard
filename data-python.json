@@ -858,5 +858,23 @@
     "hasProject": false,
     "attendance": null,
     "batch": "Python"
+  }  {
+    "id": 87,
+    "name": "Rohit shinde",
+    "email": "rohitshinde917219@gmail.com",
+    "phone": "9172195739",
+    "roll": "1353",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
+  }{
+    "id": 88,
+    "name": "Shreya Thamke thamke",
+    "email": "shreyathamke99@gmail.com",
+    "phone": "8080389896",
+    "roll": "1406",
+    "hasProject": true,
+    "attendance": null,
+    "batch": "Python"
   }
 ]
