@@ -215,7 +215,7 @@
     "email": "kamajinavne5@gmail.com",
     "phone": "7666123851",
     "roll": "1216",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": 50,
     "batch": "Flutter"
   },
