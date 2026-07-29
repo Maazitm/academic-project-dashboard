@@ -413,7 +413,8 @@
 
         <label>Max font size
           <div class="cert-row-inline">
-            <input type="range" id="cert-size" min="20" max="140" step="1">
+            <!-- Increased max size to 350 -->
+            <input type="range" id="cert-size" min="20" max="350" step="1">
             <span id="cert-size-val"></span>px
           </div>
         </label>
@@ -464,18 +465,14 @@
   };
   const DEFAULT_BATCH = "flutter";
 
-  // Certificate template settings.
-  // Once you upload the certificate PNG to your GitHub repo, point this at it.
-  // If it's at the repo root call it e.g. "certificate-template.png"; if it's in a
-  // folder use e.g. "assets/certificate-template.png". Change "main" if your
-  // default branch is called "master".
+  // SEARCH_CERT_DEFAULTS: Use this tag to easily find and edit these default values later!
   const CERT_CONFIG = {
     imageUrl: `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/main/certificate.png`,
     fontFamily: "'Dancing Script', cursive",
-    defaultX: 53,        // horizontal position of the name, as % of image width
-    defaultY: 54.5,       // vertical position of the name, as % of image height
-    defaultMaxWidth: 42,  // max width the name can occupy, as % of image width (auto-shrinks font if longer)
-    defaultFontSize: 54,  // starting / max font size in px, at full image resolution
+    defaultX: 50,        // horizontal position of the name, as % of image width
+    defaultY: 50,        // vertical position of the name, as % of image height
+    defaultMaxWidth: 39, // max width the name can occupy, as % of image width (auto-shrinks font if longer)
+    defaultFontSize: 140,// starting / max font size in px, at full image resolution
     defaultColor: "#8b0714",
     defaultAlign: "center" // left | center | right
   };
