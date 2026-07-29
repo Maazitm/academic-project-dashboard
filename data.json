@@ -606,7 +606,7 @@
     "phone": "9623757778",
     "roll": "1448",
     "hasProject": true,
-    "attendance": null,
+    "attendance": 80,
     "batch": "Flutter"
   },
   {
