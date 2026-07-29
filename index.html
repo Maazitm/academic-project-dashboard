@@ -192,19 +192,16 @@
 
   .empty-state{padding:40px; text-align:center; color:var(--ink-soft); font-size:14px;}
 
-/* This applies the red danger style universally */
-.row.is-pending {
-  background: rgba(220,38,38,0.06);
-  border-left-color: var(--danger);
-}
-
-.row.is-pending:hover {
-  background: rgba(220,38,38,0.11);
-}
-
-.row.is-pending .row-info h4 {
-  color: #9A1D1D; /* Turns the student's name dark red */
-}
+  .row.is-pending {
+    background: rgba(220,38,38,0.06);
+    border-left-color: var(--danger);
+  }
+  .row.is-pending:hover {
+    background: rgba(220,38,38,0.11);
+  }
+  .row.is-pending .row-info h4 {
+    color: #9A1D1D; 
+  }
   .row.is-pending .pill-pending{
     background:#F8B4B4; color:#7F1D1D; font-weight:700;
   }
@@ -227,11 +224,39 @@
   .legend i{width:8px; height:8px; border-radius:50%; display:inline-block;}
   .lg-green{background:var(--success);} .lg-amber{background:var(--amber);} .lg-red{background:var(--danger);}
 
-  /* Certificate modal */
-  .cert-overlay{
+  /* Modals Overlay Base */
+  .modal-overlay {
     display:none; position:fixed; inset:0; background:rgba(17,24,39,0.55);
     z-index:1000; align-items:center; justify-content:center; padding:20px;
   }
+
+  /* GitHub Auth Modal */
+  .auth-modal {
+    background:var(--surface); border-radius:16px; width:100%; max-width:400px;
+    padding:28px 24px 24px; box-shadow:var(--shadow-md);
+  }
+  .auth-modal h3 { margin:0 0 8px; font-family:'Sora',sans-serif; font-size:18px; color:var(--ink); }
+  .auth-modal p { margin:0 0 20px; font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
+  .auth-modal input[type="password"] {
+    width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--border);
+    font-family:'Inter',sans-serif; font-size:14px; margin-bottom:14px;
+  }
+  .auth-modal input[type="password"]:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+  .remember-label {
+    display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft);
+    margin-bottom:24px; cursor:pointer; user-select:none;
+  }
+  .auth-actions { display:flex; justify-content:flex-end; gap:10px; }
+  .auth-actions button {
+    font-family:'Inter',sans-serif; font-weight:600; font-size:13.5px;
+    border-radius:9px; padding:10px 16px; cursor:pointer; border:none; transition: filter 0.15s;
+  }
+  .btn-cancel { background:transparent; color:var(--ink-soft); border:1px solid var(--border); }
+  .btn-cancel:hover { background:#F3F4F6; }
+  .btn-connect { background:var(--ink); color:#fff; }
+  .btn-connect:hover { filter:brightness(1.15); }
+
+  /* Certificate modal */
   .cert-modal{
     background:var(--surface); border-radius:16px; max-width:1080px; width:100%;
     max-height:92vh; overflow:auto; box-shadow:var(--shadow-md);
@@ -287,10 +312,10 @@
     font-family:'Inter',sans-serif; font-weight:600; font-size:12.5px; padding:8px 12px; border-radius:8px; cursor:pointer;
   }
   .cert-note{font-size:11.5px; color:var(--ink-faint); line-height:1.5; margin:0;}
+  
   @media (max-width:720px){
     .cert-modal-body{flex-direction:column;}
   }
-
   @media (max-width:900px){
     .stats-row{grid-template-columns:repeat(2,1fr);}
   }
@@ -374,8 +399,24 @@
 
 </div>
 
+<!-- GitHub Auth Modal -->
+<div class="modal-overlay" id="auth-overlay">
+  <div class="auth-modal">
+    <h3>GitHub Authentication</h3>
+    <p>Enter your Personal Access Token to authenticate. This bypasses rate limits and enables staff management.</p>
+    <input type="password" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+    <label class="remember-label">
+      <input type="checkbox" id="gh-remember" checked> Remember this device
+    </label>
+    <div class="auth-actions">
+      <button class="btn-cancel" onclick="closeAuthModal()">Cancel</button>
+      <button class="btn-connect" onclick="connectGitHub()">Connect to GitHub</button>
+    </div>
+  </div>
+</div>
+
 <!-- Certificate generator modal: staff-only, Python batch only -->
-<div class="cert-overlay" id="cert-overlay">
+<div class="modal-overlay" id="cert-overlay">
   <div class="cert-modal">
     <div class="cert-modal-header">
       <h3>Generate Certificate</h3>
@@ -413,7 +454,6 @@
 
         <label>Max font size
           <div class="cert-row-inline">
-            <!-- Increased max size to 350 -->
             <input type="range" id="cert-size" min="20" max="350" step="1">
             <span id="cert-size-val"></span>px
           </div>
@@ -439,7 +479,7 @@
           <button class="btn-cert-pdf" type="button" onclick="downloadCertPDF()">Download PDF</button>
         </div>
 
-        <p class="cert-note">Staff-only, and only available for the Python + ML/AI batch. Position settings apply for the rest of this session — line it up once, then just switch between students and generate.</p>
+        <p class="cert-note">Staff-only, and only available for the Python + ML/AI batch. Position settings apply for the rest of this session.</p>
       </div>
     </div>
   </div>
@@ -450,14 +490,12 @@
   // 🚨 CONFIGURATION 🚨
   const GITHUB_USERNAME = "Maazitm";
   const REPO_NAME = "academic-project-dashboard";
-  const FILE_PATH = "data.json";
 
   // Attendance color thresholds
   const ATTENDANCE_GREEN_MIN = 75;
   const ATTENDANCE_AMBER_MIN = 60;
-  const STEP = 5; // amount the +/- buttons move attendance by
+  const STEP = 5;
 
-  // Each batch is its own JSON file in the same repo.
   const BATCHES = {
     flutter: { label: "Flutter", file: "data.json" },
     web:     { label: "Web Development", file: "data-web.json" },
@@ -465,31 +503,33 @@
   };
   const DEFAULT_BATCH = "flutter";
 
-  // SEARCH_CERT_DEFAULTS: Use this tag to easily find and edit these default values later!
+  // SEARCH_CERT_DEFAULTS: Default Values for the Certificate Generator
   const CERT_CONFIG = {
     imageUrl: `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/main/certificate.png`,
     fontFamily: "'Dancing Script', cursive",
-    defaultX: 50,        // horizontal position of the name, as % of image width
-    defaultY: 50,        // vertical position of the name, as % of image height
-    defaultMaxWidth: 39, // max width the name can occupy, as % of image width (auto-shrinks font if longer)
-    defaultFontSize: 140,// starting / max font size in px, at full image resolution
+    defaultX: 50,        
+    defaultY: 50,        
+    defaultMaxWidth: 39, 
+    defaultFontSize: 140,
     defaultColor: "#8b0714",
-    defaultAlign: "center" // left | center | right
+    defaultAlign: "center" 
   };
 
   function apiUrlFor(file){
     return `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${file}`;
   }
 
-  let currentBatch = DEFAULT_BATCH;
-  const batchCache = {}; // batchKey -> { data: [...], sha: "..." }
-  let studentData = [];  // always points at batchCache[currentBatch].data
-  let fileSha = "";      // always mirrors batchCache[currentBatch].sha
-  let adminToken = "";
+  // GLOBAL STATE
+  let adminToken = localStorage.getItem("github_token") || "";
   let isAdmin = false;
+
+  let currentBatch = DEFAULT_BATCH;
+  const batchCache = {}; 
+  let studentData = [];  
+  let fileSha = "";      
   let activeFilter = "all";
   let searchTerm = "";
-  const pendingEdits = {}; // studentId -> attendance value being staged before save
+  const pendingEdits = {}; 
 
   const AVATAR_COLORS = ["#4338CA","#0F9D58","#D97706","#DC2626","#0EA5E9","#7C3AED","#DB2777"];
   function colorFor(id){ return AVATAR_COLORS[id % AVATAR_COLORS.length]; }
@@ -497,10 +537,103 @@
     return name.trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();
   }
 
+  // ==========================================
+  // GITHUB FETCH WRAPPER (Handles Token)
+  // ==========================================
+  async function githubFetch(url, options = {}) {
+    const headers = options.headers || {};
+    if (adminToken) {
+        headers["Authorization"] = `Bearer ${adminToken}`;
+    }
+    // Set standard GitHub API version header
+    headers["Accept"] = "application/vnd.github.v3+json";
+    
+    const response = await fetch(url, { ...options, headers });
+
+    // If token is invalid/expired, clear it automatically
+    if (response.status === 401 && adminToken) {
+        localStorage.removeItem("github_token");
+        adminToken = "";
+        isAdmin = false;
+        document.getElementById('admin-badge').style.display = "none";
+        alert("Invalid or expired GitHub token. Please log in again.");
+    }
+    return response;
+  }
+
+  // ==========================================
+  // AUTHENTICATION LOGIC
+  // ==========================================
+  document.getElementById('admin-btn').addEventListener('click', () => {
+    if (isAdmin) { 
+      alert("Staff mode is already active."); 
+      return; 
+    }
+    document.getElementById('auth-overlay').style.display = 'flex';
+  });
+
+  function closeAuthModal() {
+    document.getElementById('auth-overlay').style.display = 'none';
+  }
+
+  async function connectGitHub() {
+    const tokenInput = document.getElementById('gh-token-input').value.trim();
+    if (!tokenInput) return;
+
+    const loadingEl = document.getElementById('loading-text');
+    loadingEl.style.display = "block";
+    loadingEl.innerText = "Verifying access...";
+    closeAuthModal();
+
+    try {
+        const repoUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}`;
+        const response = await fetch(repoUrl, {
+            headers: { "Authorization": `Bearer ${tokenInput}` }
+        });
+
+        if (response.status === 401) {
+            alert("That access token isn't valid. Please check it and try again.");
+        } else if (response.status === 403) {
+            alert("That token was rejected (rate-limited or insufficient scope).");
+        } else if (response.status === 404) {
+            alert("That token doesn't have access to this repository.");
+        } else if (response.ok) {
+            const repoInfo = await response.json();
+            const canWrite = !!(repoInfo.permissions && repoInfo.permissions.push);
+            
+            if (!canWrite) {
+                alert("This token is valid but doesn't have write access to this repository.");
+            } else {
+                // Success!
+                adminToken = tokenInput;
+                isAdmin = true;
+                
+                if (document.getElementById('gh-remember').checked) {
+                    localStorage.setItem("github_token", adminToken);
+                }
+                
+                document.getElementById('admin-badge').style.display = "inline-block";
+                
+                // Re-fetch current batch to utilize the authenticated rate limits
+                await switchBatch(currentBatch);
+            }
+        }
+    } catch (err) {
+        console.error(err);
+        alert("Network error while verifying the token. Please try again.");
+    } finally {
+        loadingEl.style.display = "none";
+    }
+  }
+
+  // ==========================================
+  // DATA FETCHING & SAVING
+  // ==========================================
   async function fetchBatch(batchKey){
     const file = BATCHES[batchKey].file;
-    const response = await fetch(apiUrlFor(file));
+    const response = await githubFetch(apiUrlFor(file));
     if(!response.ok) throw new Error("fetch failed for " + file);
+    
     const data = await response.json();
     const decoded = decodeURIComponent(escape(window.atob(data.content)));
     batchCache[batchKey] = { data: JSON.parse(decoded), sha: data.sha };
@@ -543,18 +676,18 @@
   async function commit(message){
     document.getElementById('loading-text').style.display = "block";
     document.getElementById('loading-text').innerText = "Saving changes...";
+    
     const file = BATCHES[currentBatch].file;
     const updatedJson = JSON.stringify(studentData, null, 2);
     const encoded = window.btoa(unescape(encodeURIComponent(updatedJson)));
+    
     try{
-      const response = await fetch(apiUrlFor(file), {
+      const response = await githubFetch(apiUrlFor(file), {
         method: "PUT",
-        headers: {
-          "Authorization": `token ${adminToken}`,
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message, content: encoded, sha: fileSha })
       });
+      
       if(response.ok){
         const result = await response.json();
         fileSha = result.content.sha;
@@ -571,50 +704,6 @@
       document.getElementById('loading-text').style.display = "none";
     }
   }
-
-  document.getElementById('admin-btn').addEventListener('click', async () => {
-    if(isAdmin){ alert("Staff mode is already on."); return; }
-    const token = (prompt("Enter your GitHub Personal Access Token:") || "").trim();
-    if(!token) return;
-
-    const loadingEl = document.getElementById('loading-text');
-    loadingEl.style.display = "block";
-    loadingEl.innerText = "Verifying access...";
-
-    try{
-      // Check the token against this specific repo, not just that it's "a" valid token.
-      const repoUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}`;
-      const response = await fetch(repoUrl, {
-        headers: { "Authorization": `token ${token}` }
-      });
-
-      if(response.status === 401){
-        alert("That access token isn't valid. Please check it and try again.");
-      } else if(response.status === 403){
-        alert("That token was rejected (rate-limited or insufficient scope). Please try again.");
-      } else if(response.status === 404){
-        alert("That token doesn't have access to this repository.");
-      } else if(!response.ok){
-        alert("Couldn't verify the token right now. Please try again.");
-      } else {
-        const repoInfo = await response.json();
-        const canWrite = !!(repoInfo.permissions && repoInfo.permissions.push);
-        if(!canWrite){
-          alert("This token is valid but doesn't have write access to this repository, so changes can't be saved.");
-        } else {
-          adminToken = token;
-          isAdmin = true;
-          document.getElementById('admin-badge').style.display = "inline-block";
-          render();
-        }
-      }
-    }catch(err){
-      console.error(err);
-      alert("Network error while verifying the token. Please try again.");
-    } finally {
-      loadingEl.style.display = "none";
-    }
-  });
 
   document.getElementById('search-input').addEventListener('input', (e) => {
     searchTerm = e.target.value.toLowerCase();
@@ -743,10 +832,9 @@
     document.getElementById('ledger-attendance').innerText = attCount > 0 ? `${(attSum/attCount).toFixed(1)}%` : '—';
   }
 
-  // ---------------------------------------------------------------------
-  // CERTIFICATE GENERATION (staff only, Python batch only)
-  // ---------------------------------------------------------------------
-
+  // ==========================================
+  // CERTIFICATE GENERATION
+  // ==========================================
   let certImagePromise = null;
   function loadCertImage(){
     if(!certImagePromise){
@@ -920,7 +1008,34 @@
     pdf.save(`certificate-${(certState.name || 'student').trim().replace(/\s+/g, '_')}.pdf`);
   };
 
-  window.onload = () => switchBatch(DEFAULT_BATCH);
+  // ==========================================
+  // INITIALIZATION ON LOAD
+  // ==========================================
+  window.onload = async () => {
+    // If a token is saved in localStorage, verify it silently to restore staff mode
+    if (adminToken) {
+        try {
+            const repoUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}`;
+            const res = await fetch(repoUrl, { headers: { "Authorization": `Bearer ${adminToken}` } });
+            
+            if (res.ok) {
+                const repoInfo = await res.json();
+                if (repoInfo.permissions && repoInfo.permissions.push) {
+                    isAdmin = true;
+                    document.getElementById('admin-badge').style.display = "inline-block";
+                }
+            } else if (res.status === 401) {
+                localStorage.removeItem("github_token");
+                adminToken = "";
+            }
+        } catch(e) {
+            console.warn("Could not silently verify GitHub token on load.", e);
+        }
+    }
+    
+    // Fetch data using the token if it exists (avoids rate limiting!)
+    switchBatch(DEFAULT_BATCH);
+  };
 </script>
 </body>
 </html>
