@@ -495,7 +495,7 @@
     "email": "chetanpattekar0@gmail.com",
     "phone": "7276507316",
     "roll": "1476",
-    "hasProject": false,
+    "hasProject": true,
     "attendance": null,
     "batch": "Web Development"
   },
