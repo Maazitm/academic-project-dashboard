@@ -135,8 +135,8 @@
     "email": "ksamiksha425@gmail.com",
     "phone": "9527986429",
     "roll": "1260",
-    "hasProject": false,
-    "attendance": 80,
+    "hasProject": true,
+    "attendance": 75,
     "batch": "Web Development"
   },
   {
